@@ -4,16 +4,8 @@ class Solution {
     public int solution(String myString, String pat) {
         String answer = "";
         for(char ch : myString.toCharArray()){
-            if(ch=='A'){
-                answer += "B";    
-            }else{
-                answer += "A";
-            }
+           answer += (ch=='A')?"B" : "A";
         }
-        if(answer.indexOf(pat)>=0){
-            return 1;
-        }else{
-            return 0;
-        }
+        return (answer.indexOf(pat)>=0)? 1 : 0;
     }
 }
