@@ -1,1 +1,12 @@
-아직 못풀었음
+class Solution {
+    public int solution(String number) {
+        
+        int numberSize = number.length();
+        int answer = 0;
+        
+        for(int i = 0; i<numberSize; i++){
+           answer += Character.getNumericValue(number.charAt(i));
+        }
+        return answer%9;
+    }
+}
